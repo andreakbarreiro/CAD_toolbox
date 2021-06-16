@@ -104,11 +104,23 @@ rasterpm.color_assign_type = 1;
 rasterpm.PauseBetweenAssemb = 0;
 
 % This will rotate through colors: each assembly in a different color
-h  = raster_all_assemblies_fn( spM,AAasspikes,As_across_bins_pr,...
+hr1  = raster_all_assemblies_fn( spM,AAasspikes,As_across_bins_pr,...
     As_order,BinSizes,rasterpm);
+set(gca,'FontSize',14); title('Without adjustment');
+axis tight; ylim([0.5,nneu+0.5]);
 
+%% %%%%%%%%%%%%%%% RASTER PLOT: ADJUSTED ACTIVITY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Subtract off "expected" assembly activity due to 
+% background firing rate
+[assembly_activity_adj]=Adjust_AsAct(assembly_activity,As_across_bins_pr,assembly,...
+    spM,BinSizes);
 
+% Find spikes associated w/ the assembly
+[AAspMAdj,AAasspikesAdj]=assembly_rasterplot(As_across_bins_pr,...
+    assembly_activity_adj,spM,0);
 
-
-
+hr2  = raster_all_assemblies_fn( spM,AAasspikesAdj,As_across_bins_pr,...
+    As_order,BinSizes,rasterpm);
+set(gca,'FontSize',14); title('With adjustment');
+axis tight; ylim([0.5,nneu+0.5]);

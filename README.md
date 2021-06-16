@@ -7,11 +7,11 @@ Main modifications:
   Extended lower threshold for pairwise correlation test (Truong 2020)
   Added Compressed Replay pruning algorithm (beta: Truong 2020)
   Added data generation routines for:
-      different types of cell assemblies 
+      different types of cell assemblies    
       activity of hippocampal place cells with/without theta precession
 
 References: 
-  E. Russo and D. Durstewitz. Cell assemblies at multiple time scales with arbitrary lag constellations. eLife, 6, 2017.
+  E. Russo and D. Durstewitz. Cell assemblies at multiple time scales with arbitrary lag constellations. eLife, 6, 2017. 
   Phan Minh Duc Truong. Cell assembly detection in low firing-rate spike train data. PhD thesis, Southern Methodist University, 2020.
   
 CONTENTS:

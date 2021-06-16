@@ -5,9 +5,11 @@ Modified from code published by Russo and Durstewitz, 2017.
 
 Main modifications:
   Extended lower threshold for pairwise correlation test (Truong 2020)
-  Added Compressed Replay pruning algorithm (beta: Truong 2020)
+  Added Compressed Replay pruning algorithm (beta: Truong 2020)  
   Added data generation routines for:
-      different types of cell assemblies    
+  
+      different types of cell assemblies  
+      
       activity of hippocampal place cells with/without theta precession
 
 References: 

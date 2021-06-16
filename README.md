@@ -41,5 +41,11 @@ CADfunc
   
 CADfunc/CreateTestData
 
-CADfunc/ExtraPlotFn
+CADfunc/ExtraPlotFn/  
+  CADfunc/ExtraPlotFn/plot_assembly_assignment_matrix.m         More control over assembly matrix  
+  CADfunc/ExtraPlotFn/plot_lines_on_raster.m                    Plot vertical lines to mark time epochs
+  CADfunc/ExtraPlotFn/raster_all_assemblies_fn.m                Plot all assemblies in rotating colors  
+  CADfunc/ExtraPlotFn/raster_single_assembly_fn.m               Plot a single assembly
+
+
 

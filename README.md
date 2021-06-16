@@ -4,41 +4,39 @@ Detect correlated activity in neural spike trains
 Modified from code published by Russo and Durstewitz, 2017.
 
 Main modifications:
-  Extended lower threshold for pairwise correlation test (Truong 2020)
-  Added Compressed Replay pruning algorithm (beta: Truong 2020)  
-  Added data generation routines for:
-  
-      different types of cell assemblies  
-      
-      activity of hippocampal place cells with/without theta precession
+  - Extended lower threshold for pairwise correlation test (Truong 2020)  
+  - Added Compressed Replay pruning algorithm (beta: Truong 2020)    
+  - Added data generation routines for:    
+      - different types of cell assemblies        
+      - activity of hippocampal place cells with/without theta precession  
 
-References: 
-  E. Russo and D. Durstewitz. Cell assemblies at multiple time scales with arbitrary lag constellations. eLife, 6, 2017. 
-  Phan Minh Duc Truong. Cell assembly detection in low firing-rate spike train data. PhD thesis, Southern Methodist University, 2020.
+References:  
+  - E. Russo and D. Durstewitz. Cell assemblies at multiple time scales with arbitrary lag constellations. eLife, 6, 2017.   
+  - Phan Minh Duc Truong. Cell assembly detection in low firing-rate spike train data. PhD thesis, Southern Methodist University, 2020.  
   
-CONTENTS:
-CAD_example.m
-Compress_pruning_example.m
+CONTENTS:  
+CAD_example.m  
+Compress_pruning_example.m  
 
-CADfunc 
-  (Original RD17 files)
-  CADfunc/Main_assemblies_detection.m
-  CADfunc/FindAssemblies_recursive.m
-  CADfunc/TestPair.m
-  CADfunc/Assembly_activity_function.m
-  CADfunc/assemblies_across_bins.m
-  CADfunc/assembly_assignment_matrix.m
-  CADfunc/assembly_rasterplot.m
-  CADfunc/pruning_across_bins.m
-  CADfunc/restyle_assembly_lags_time.m
-  CADfunc/time_rescale.m
+CADfunc   
+  (Original RD17 files)  
+  CADfunc/Main_assemblies_detection.m  
+  CADfunc/FindAssemblies_recursive.m  
+  CADfunc/TestPair.m  
+  CADfunc/Assembly_activity_function.m  
+  CADfunc/assemblies_across_bins.m  
+  CADfunc/assembly_assignment_matrix.m  
+  CADfunc/assembly_rasterplot.m  
+  CADfunc/pruning_across_bins.m  
+  CADfunc/restyle_assembly_lags_time.m  
+  CADfunc/time_rescale.m  
   
-  (Added by Barreiro and/or Truong)
-  CADfunc/Adjust_AsAct.m
-  CADfunc/compress_pruning_fn.m
-  CADfunc/collectsubSpM.m
-  CADfunc/uniquecell.m
-  CADfunc/rasterplot_fn.m
+  (Added by Barreiro and/or Truong)  
+  CADfunc/Adjust_AsAct.m  
+  CADfunc/compress_pruning_fn.m  
+  CADfunc/collectsubSpM.m  
+  CADfunc/uniquecell.m  
+  CADfunc/rasterplot_fn.m  
   CADfunc/view_assembly_activity_fn.m
   
 CADfunc/CreateTestData

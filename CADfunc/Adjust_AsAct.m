@@ -30,7 +30,7 @@ for n=1:length(as)
    %   what is E(min(p1,p2,...,pn))
    %
    %AS A PROXY: USE min(u1,u2,...un)
-   avgSp'
+   %avgSp'
    mAdj = min(avgSp);
    temp = assembly_activity{n};
    temp(:,2)=max(temp(:,2)-mAdj,0);

@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%% TUTORIAL ON CELL ASSEMBLY DETECTION %%%%%%%%%%%%%%%%%%%%%%%%%
 close all; clear; clc;
-load('testData/test_data.mat');  % Contains spM
+load('testData/test_spike_data.mat');  % Contains spM
 
 addpath('CADfunc/');
 addpath('CADfunc/CreateTestData');
@@ -25,7 +25,7 @@ Exp_thres = 1;
 % Use "plotOnly" if you have already run the algorithm, and just 
 %  want to experiment with the visualizations/pruning options.
 %
-plotOnly = 1;
+plotOnly = 0;
 if (plotOnly)
     load('test_CAD_example.mat','assembly');
 else
@@ -33,7 +33,7 @@ else
         0,0.05,100);
 
     %% If you want to save your results for future reference
-    %save('test_CAD_example.mat','assembly');
+    save('test_CAD_example.mat','assembly');
 end
 %%
 

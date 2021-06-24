@@ -1,6 +1,9 @@
 close all; clear; clc;
 
 addpath('CADfunc/');
+addpath('CADfunc/CreateTestData');
+addpath('CADfunc/ExtraPlotFn');
+%%
 %% generate data with compressed pattern
 n = [100 100];
 T = [1 0.2];
@@ -97,6 +100,6 @@ for jj = 1:numel(PrComprAs)
         %     pause;
     end
 end
-title('Activities from compress prunning');
+title('Activities from compress pruning');
 
 end

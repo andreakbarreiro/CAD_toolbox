@@ -25,7 +25,7 @@ Exp_thres = 1;
 % Use "plotOnly" if you have already run the algorithm, and just 
 %  want to experiment with the visualizations/pruning options.
 %
-plotOnly = 0;
+plotOnly = 1;
 if (plotOnly)
     load('test_CAD_example.mat','assembly');
 else
@@ -36,6 +36,11 @@ else
     save('test_CAD_example.mat','assembly');
 end
 %%
+
+%% Students: these "disp" and "pause" commands are here for demonstration.
+%%    can remove when no longer useful for you
+disp('Press ENTER to start plotting');
+pause;
 
 
 %% %%%%%%%%%%%%%%%%%%%%%%%% VISUALIZATION %%%%%%%%%%%%%%%%%%%%%%%%
@@ -49,6 +54,14 @@ display='raw';
 [Amatrix,Binvector,Unit_order,As_order]=...
   assembly_assignment_matrix(As_across_bins, nneu, BinSizes, display,1);
 
+clc
+disp('This is the Assembly Assignment Matrix.');
+disp('It indicates (1) which cells participate, and (2) at which lag');
+disp('  ');
+disp('Press ENTER to continue');
+pause;
+
+
 %% %%%%%%%%%%%%%%%%%%%%%%%% PRUNING %%%%%%%%%%%%%%%%%%%%%%%%
 figure(2)
 % PRUNING: criteria = 'biggest';
@@ -59,6 +72,18 @@ criteria = 'biggest';
 display='raw';
 [Amatrix,Binvector,Unit_order,As_order]=...
   assembly_assignment_matrix(As_across_bins_pr, nneu, BinSizes, display,1);
+
+clc
+disp('This is the PRUNED Assembly Assignment Matrix.');
+disp('It contains a subset of assemblies; in this case ');
+disp('  it discards any assemblies which are a proper ');
+disp('  subset of another. ');
+disp('If the same cell configuration is identified at multiple');
+disp('  time scales, the most significant is maintained');
+disp(' ');
+disp('Press ENTER to continue');
+pause;
+
 
 %% %%%%%%%%%%%%%%%%%%%%%%%% ASSEMBLY ACTIVATION %%%%%%%%%%%%%%%%%%%%%%%%
 figure(3)
@@ -77,6 +102,13 @@ for i=1:min(length(assembly_activity),5)
     hold on
 end
 
+clc
+disp('This is (pruned) assembly activity as a function of time');
+disp('  "Activity" means how many times the assembly was activated');
+disp('  in each time bin');
+disp(' ');
+disp('Press ENTER to continue');
+pause;
 
 
 %% %%%% Another style of raster plot: view each assembly individually %%
@@ -90,7 +122,12 @@ for jj = 1:numel(As_across_bins_pr)
    % end
 end
 
-
+clc
+disp('Here we view each (pruned) assembly as separate raster plot');
+disp('  This can be useful when assemblies overlap in cell membership.');
+disp('  ');
+disp('Press ENTER to continue');
+pause;
 
 %% %%%%%%%%%%%%%%% RASTER PLOT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %    First use RD17 function to extract assembly-linked spikes
@@ -102,12 +139,12 @@ rasterpm.Unit_order = Unit_order;
 rasterpm.PlotParticipatingUnitsOnly = 0;
 rasterpm.color_assign_type = 1;
 rasterpm.PauseBetweenAssemb = 0;
-
-% This will rotate through colors: each assembly in a different color
-hr1  = raster_all_assemblies_fn( spM,AAasspikes,As_across_bins_pr,...
-    As_order,BinSizes,rasterpm);
-set(gca,'FontSize',14); title('Without adjustment');
-axis tight; ylim([0.5,nneu+0.5]);
+% 
+% % This will rotate through colors: each assembly in a different color
+% hr1  = raster_all_assemblies_fn( spM,AAasspikes,As_across_bins_pr,...
+%     As_order,BinSizes,rasterpm);
+% set(gca,'FontSize',14); title('Without adjustment');
+% axis tight; ylim([0.5,nneu+0.5]);
 
 %% %%%%%%%%%%%%%%% RASTER PLOT: ADJUSTED ACTIVITY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -124,3 +161,16 @@ hr2  = raster_all_assemblies_fn( spM,AAasspikesAdj,As_across_bins_pr,...
     As_order,BinSizes,rasterpm);
 set(gca,'FontSize',14); title('With adjustment');
 axis tight; ylim([0.5,nneu+0.5]);
+
+clc
+disp('This is a raster plot showing the activity of each (pruned)'); 
+disp('   assembly with a different color');
+disp('  ');
+
+disp('Press ENTER to continue');
+
+pause;
+
+xlim([50,100]);
+clc
+disp('Zoom in using xlim to get a closer look at the assembly structure');

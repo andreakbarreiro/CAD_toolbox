@@ -38,7 +38,12 @@ CONTENTS:
  | CADfunc/rasterplot_fn.m  | |  
  |  CADfunc/view_assembly_activity_fn.m| |  
 |  **CADfunc/CreateTestData** |  |  
-| File name here | |  
+| CADfunc/CreateTestData/makeSimulatedAssembData.m            |    Basic driver function for creating data with embedded assemblies  |  
+| CADfunc/CreateTestData/.m            |      |
+| CADfunc/CreateTestData/.m            |      |
+| CADfunc/CreateTestData/.m            |      |
+| CADfunc/CreateTestData/.m            |      |
+| CADfunc/CreateTestData/.m            |      |
   | **CADfunc/ExtraPlotFn/** |  |  
   | CADfunc/ExtraPlotFn/plot_assembly_assignment_matrix.m     |    More control over assembly matrix  |   
   | CADfunc/ExtraPlotFn/plot_lines_on_raster.m                |    Plot vertical lines to mark time epochs |    

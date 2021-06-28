@@ -31,7 +31,7 @@ CONTENTS:
  |  CADfunc/restyle_assembly_lags_time.m  | |  
  | CADfunc/time_rescale.m  | |   
  | **CADfunc** | (Added by Barreiro and/or Truong)  |  
- |  CADfunc/Adjust_AsAct.m  | |  
+ |  CADfunc/Adjust_AsAct.m  |   Adjusts assembly activity by subtracting off an estimate of baseline activity |  
  | CADfunc/compress_pruning_fn.m  | |  
   |CADfunc/collectsubSpM.m  | |  
   |CADfunc/uniquecell.m  | |  
@@ -41,15 +41,13 @@ CONTENTS:
 | CADfunc/CreateTestData/makeSimulatedAssembData.m            |    Basic driver function for creating data with embedded assemblies  |  
 | CADfunc/CreateTestData/genASp_Type#.m  #=1-4          |    Create assemblies of Type # (as defined in RD17) |
 | CADfunc/CreateTestData/genASp_LinTrackTheta.m            |    Create assemblies corresponding to a rat running a linear track   |
+| CADfunc/CreateTestData/embed_assembly_fn.m            |    Embed assembly spikes into a spike raster  |
 | CADfunc/CreateTestData/makeAR.m            |     Makes a slowly varying rate function (for use in creating background spikes |
 | CADfunc/CreateTestData/genNHPP.m            |     Generate spike trains for a nonhomogeneous Poisson process |
-| CADfunc/CreateTestData/embed_assembly_fn.m            |    Embed assembly spikes into a spike raster  |
 | CADfunc/CreateTestData/eval_pw_const.m            |     Utility function for genNHPP |
-| CADfunc/CreateTestData/embed_data_fn.m            |      |
-| CADfunc/CreateTestData/embed_alt_data_fn.m            |      |
+| CADfunc/CreateTestData/embed_alt_data_fn.m            |     Embed original and compressed versions of an assembly (Truong 2020)  |
 | CADfunc/CreateTestData/generating_ISI_fn.m            |      |
 | CADfunc/CreateTestData/pair_Generator.m            |      |
-
   | **CADfunc/ExtraPlotFn/** |  |  
   | CADfunc/ExtraPlotFn/plot_assembly_assignment_matrix.m     |    More control over assembly matrix  |   
   | CADfunc/ExtraPlotFn/plot_lines_on_raster.m                |    Plot vertical lines to mark time epochs |    

@@ -39,11 +39,17 @@ CONTENTS:
  |  CADfunc/view_assembly_activity_fn.m| |  
 |  **CADfunc/CreateTestData** |  |  
 | CADfunc/CreateTestData/makeSimulatedAssembData.m            |    Basic driver function for creating data with embedded assemblies  |  
-| CADfunc/CreateTestData/.m            |      |
-| CADfunc/CreateTestData/.m            |      |
-| CADfunc/CreateTestData/.m            |      |
-| CADfunc/CreateTestData/.m            |      |
-| CADfunc/CreateTestData/.m            |      |
+| CADfunc/CreateTestData/genASp_Type#.m  #=1-4          |    Create assemblies of Type # (as defined in RD17) |
+| CADfunc/CreateTestData/genASp_LinTrackTheta.m            |    Create assemblies corresponding to a rat running a linear track   |
+| CADfunc/CreateTestData/makeAR.m            |     Makes a slowly varying rate function (for use in creating background spikes |
+| CADfunc/CreateTestData/genNHPP.m            |     Generate spike trains for a nonhomogeneous Poisson process |
+| CADfunc/CreateTestData/embed_assembly_fn.m            |    Embed assembly spikes into a spike raster  |
+| CADfunc/CreateTestData/eval_pw_const.m            |     Utility function for genNHPP |
+| CADfunc/CreateTestData/embed_data_fn.m            |      |
+| CADfunc/CreateTestData/embed_alt_data_fn.m            |      |
+| CADfunc/CreateTestData/generating_ISI_fn.m            |      |
+| CADfunc/CreateTestData/pair_Generator.m            |      |
+
   | **CADfunc/ExtraPlotFn/** |  |  
   | CADfunc/ExtraPlotFn/plot_assembly_assignment_matrix.m     |    More control over assembly matrix  |   
   | CADfunc/ExtraPlotFn/plot_lines_on_raster.m                |    Plot vertical lines to mark time epochs |    
